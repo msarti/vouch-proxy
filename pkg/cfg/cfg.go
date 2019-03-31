@@ -43,6 +43,7 @@ type config struct {
 	Headers struct {
 		JWT         string `mapstructure:"jwt"`
 		User        string `mapstructure:"user"`
+		Institute   string `mapstructure:"institute"`
 		QueryString string `mapstructure:"querystring"`
 		Redirect    string `mapstructure:"redirect"`
 		Success     string `mapstructure:"success"`

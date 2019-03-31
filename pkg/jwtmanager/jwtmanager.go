@@ -23,6 +23,7 @@ import (
 type VouchClaims struct {
 	Username string   `json:"username"`
 	Sites    []string `json:"sites"` // tempting to make this a map but the array is fewer characters in the jwt
+	Institute string  `json:"institute"`
 	jwt.StandardClaims
 }
 
@@ -53,6 +54,7 @@ func CreateUserTokenString(u structs.User) string {
 	claims := VouchClaims{
 		u.Username,
 		Sites,
+		 u.Institute,
 		StandardClaims,
 	}
 

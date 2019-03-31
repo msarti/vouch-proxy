@@ -193,6 +193,8 @@ func ValidateRequestHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Add(cfg.Cfg.Headers.User, claims.Username)
+	w.Header().Add(cfg.Cfg.Headers.Institute, claims.Institute)
+
 	w.Header().Add(cfg.Cfg.Headers.Success, "true")
 	log.WithFields(log.Fields{cfg.Cfg.Headers.User: w.Header().Get(cfg.Cfg.Headers.User)}).Debug("response header")
 

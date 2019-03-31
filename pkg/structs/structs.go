@@ -16,6 +16,7 @@ type User struct {
 	CreatedOn  int64  `json:"createdon"`
 	LastUpdate int64  `json:"lastupdate"`
 	ID         int    `json:"id",mapstructure:"id"`
+	Institute  string `json:"institute"`
 	// jwt.StandardClaims
 }
 
